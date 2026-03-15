@@ -1,0 +1,42 @@
+<section class="dashboard">
+
+<div class="container">
+
+<h2>Welcome to EcoConnect</h2>
+
+<div class="dashboard-cards">
+
+<div class="card profile-card" routerLink="/user/profile">
+
+<h3>👤 Profile</h3>
+
+<p>{{user?.fullName}}</p>
+<p>{{user?.email}}</p>
+
+<p class="view-profile">Click to view full profile</p>
+
+</div>
+
+<div class="card" [routerLink]="['/user/requests']">
+<h3>📦 My Requests</h3>
+<p>View your e-waste pickup requests</p>
+</div>
+
+<div class="card">
+<h3>🔔 Notifications</h3>
+<p>Check latest updates</p>
+</div>
+
+<div class="card" routerLink="/user/create-request">
+<h3>♻ Create Request</h3>
+<p>Submit e-waste pickup request</p>
+</div>
+
+</div>
+
+</div>
+
+
+
+</section>
+

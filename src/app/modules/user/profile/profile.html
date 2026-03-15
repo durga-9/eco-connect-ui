@@ -1,0 +1,43 @@
+<section class="profile-page">
+
+<div class="container">
+
+<h2>User Profile</h2>
+
+<div *ngIf="user" class="profile-card">
+
+<div class="profile-row">
+<label>Full Name</label>
+<p>{{user.fullName}}</p>
+</div>
+
+<div class="profile-row">
+<label>Email</label>
+<p>{{user.email}}</p>
+</div>
+
+<div class="profile-row">
+<label>Phone</label>
+<p>{{user.phone}}</p>
+</div>
+
+<div class="profile-row">
+<label>Address</label>
+<p>{{user.address}}</p>
+</div>
+
+<div class="profile-row">
+<label>City</label>
+<p>{{user.city}}</p>
+</div>
+
+<div class="profile-row">
+<label>Pincode</label>
+<p>{{user.pincode}}</p>
+</div>
+
+</div>
+
+</div>
+
+</section>

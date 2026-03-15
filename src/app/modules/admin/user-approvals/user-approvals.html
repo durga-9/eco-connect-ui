@@ -1,0 +1,52 @@
+<h2>Pending User Registrations</h2>
+
+<div class="status-messages">
+  <p *ngIf="loading()" class="status-message">Loading pending users…</p>
+  <p *ngIf="!loading() && error()" class="status-message error">{{ error() }}</p>
+  <p *ngIf="!loading() && !error() && users().length === 0" class="status-message">
+    No pending users found.
+  </p>
+</div>
+
+<table class="users-table" *ngIf="!loading() && !error() && users().length">
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone</th>
+<th>City</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let u of users()">
+
+<td>{{u.id}}</td>
+<td>{{u.fullName}}</td>
+<td>{{u.email}}</td>
+<td>{{u.phone}}</td>
+<td>{{u.city}}</td>
+
+<td>
+
+<button class="approve-btn"
+(click)="approveUser(u.id)">
+Approve
+</button>
+
+<button class="reject-btn"
+(click)="rejectUser(u.id)">
+Reject
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>

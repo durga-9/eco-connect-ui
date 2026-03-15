@@ -1,0 +1,59 @@
+.dashboard{
+padding:60px 0;
+background:#f4f9f6;
+min-height:80vh;
+}
+
+.dashboard h2{
+margin-bottom:30px;
+font-size: 2.1rem;
+font-weight: 800;
+color: #1f2a37;
+text-align: center;
+}
+
+.dashboard-cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+margin-top: 32px;
+}
+
+.card{
+background: linear-gradient(135deg, #ffffff, #eaf4ff);
+padding:18px;
+border-radius:16px;
+box-shadow:0 10px 18px rgba(0,0,0,0.06);
+transition: transform .2s ease, box-shadow .2s ease;
+text-align: center;
+}
+
+.card:hover{
+  transform: translateY(-3px);
+  box-shadow:0 14px 20px rgba(0,0,0,0.1);
+}
+
+.card h3{
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e8e5a;
+}
+
+.card p{
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1f2a37;
+}
+
+.card::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 14px auto 0;
+  border-radius: 99px;
+  background: linear-gradient(90deg, rgba(30,142,90,0.8), rgba(15,88,64,0.8));
+  opacity: 0.6;
+}

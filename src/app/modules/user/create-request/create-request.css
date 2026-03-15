@@ -1,0 +1,83 @@
+.request-page{
+padding:60px 0;
+background:#f4f9f6;
+min-height:80vh;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+}
+
+.request-page h2{
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: #1f2a37;
+  text-align: center;
+}
+
+.container{
+max-width:700px;
+width: 100%;
+}
+
+form{
+background: linear-gradient(135deg, #ffffff, #f0f7ff);
+padding:40px;
+border-radius:16px;
+box-shadow:0 12px 24px rgba(0,0,0,0.08);
+transition: transform .2s ease, box-shadow .2s ease;
+}
+
+form:hover{
+  transform: translateY(-2px);
+  box-shadow:0 16px 32px rgba(0,0,0,0.1);
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+.form-group label{
+  display: block;
+  font-weight: 700;
+  color: #1e8e5a;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+width:100%;
+padding:12px;
+border:2px solid #e5e7eb;
+border-radius:8px;
+font-size: 16px;
+transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color: #1e8e5a;
+  outline: none;
+}
+
+.submit-btn{
+background: linear-gradient(135deg, #1e8e5a, #0f5840);
+color:white;
+border:none;
+padding:14px;
+border-radius:8px;
+cursor:pointer;
+width:100%;
+font-weight:700;
+font-size: 16px;
+transition: all 0.2s ease;
+}
+
+.submit-btn:hover{
+background: linear-gradient(135deg, #0f5840, #0a3d2c);
+transform: translateY(-1px);
+box-shadow: 0 6px 16px rgba(30,142,90,0.3);
+}

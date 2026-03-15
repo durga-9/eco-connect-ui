@@ -1,0 +1,42 @@
+<section class="requests-page">
+
+<div class="container">
+
+<h2>My E-Waste Requests</h2>
+
+<div *ngIf="!requests || requests.length === 0" class="empty">
+No requests submitted yet.
+</div>
+
+<div class="requests-grid">
+
+<div class="request-card" *ngFor="let r of requests">
+
+<h3>{{r.itemName}}</h3>
+
+<p><strong>Category:</strong> {{r.categoryDisplayName}}</p>
+
+<p><strong>Status:</strong>
+<span class="status" [ngClass]="r.status.toLowerCase()">
+{{r.status}}
+</span>
+</p>
+
+<p><strong>Preferred Date:</strong> {{r.preferredDate}}</p>
+
+<p *ngIf="r.scheduledDate">
+<strong>Scheduled Pickup:</strong>
+{{r.scheduledDate}} ({{r.scheduledTimeSlot}})
+</p>
+
+<p *ngIf="r.assignedWorkerName">
+<strong>Worker:</strong> {{r.assignedWorkerName}}
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>

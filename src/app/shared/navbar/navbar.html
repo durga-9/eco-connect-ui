@@ -1,0 +1,54 @@
+<nav class="navbar">
+
+    <div class="logo">
+        ♻️ EcoConnect
+    </div>
+
+    <div class="nav-links">
+
+        <a routerLink="/">Home</a>
+
+        <a *ngIf="isLoggedIn()" routerLink="/user/dashboard">Dashboard</a>
+
+        <a *ngIf="isLoggedIn()" routerLink="/user/requests">My Requests</a>
+
+
+        <!-- Notification Bell -->
+
+        <div *ngIf="isLoggedIn()" class="notification-container">
+
+            <button class="bell-btn" (click)="toggleNotifications()" aria-label="Notifications">
+                <span class="bell-icon">🔔</span>
+                <span *ngIf="notifications.length > 0" class="badge">
+                    {{notifications.length}}
+                </span>
+            </button>
+
+            <div *ngIf="showDropdown" class="notification-dropdown">
+
+                <div *ngIf="notifications.length === 0" class="notification-empty">
+                    No notifications
+                </div>
+
+                <div *ngFor="let n of notifications" class="notification-item">
+                    {{n.message}}
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button *ngIf="isLoggedIn()" (click)="logout()" class="logout-btn">
+            Logout
+        </button>
+
+        <a *ngIf="!isLoggedIn()" routerLink="/login">Login</a>
+
+        <button *ngIf="!isLoggedIn()" routerLink="/register" class="reg-btn">
+          Register
+        </button>
+
+    </div>
+
+</nav>
