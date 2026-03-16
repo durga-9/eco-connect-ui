@@ -6,6 +6,8 @@ import { Dashboard } from './modules/user/dashboard/dashboard';
 import { Profile } from './modules/user/profile/profile';
 import { CreateRequest } from './modules/user/create-request/create-request';
 import { MyRequests } from './modules/user/my-requests/my-requests';
+import { ResetPassword } from './modules/auth/reset-password/reset-password';
+import { ForgotPassword } from './modules/auth/forgot-password/forgot-password';
 
 export const routes: Routes = [
     {
@@ -46,5 +48,12 @@ export const routes: Routes = [
   loadComponent: () =>
     import('./modules/admin/user-approvals/user-approvals')
     .then(m => m.UserApprovalsComponent)
+},
+{ 
+  path: 'forgot-password', component: ForgotPassword 
+},
+{ 
+  path: 'reset-password', component: ResetPassword 
 }
+
 ];
